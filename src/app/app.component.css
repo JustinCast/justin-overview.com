@@ -1,0 +1,44 @@
+#link-ul {
+  list-style-type: none;
+  width: 70%;
+  padding: 0;
+}
+.link-li {
+  display: inline-block;
+  margin: 1%;
+}
+nav {
+  background-color: transparent;
+  color: #fcf5e4;
+  font-weight: 400;
+}
+#avatar {
+  border: 3px solid #fcf5e4;
+  background-color: transparent;
+  border-radius: 100px;
+  height: 15%;
+  width: 15%;
+  margin: auto;
+  margin-top: 5%;
+}
+#avatar:hover {
+  background-color: #fcf5e4;
+  border: 3px solid black;
+}
+mat-expansion-panel {
+  width: 50%;
+  margin: auto;
+  background-color: rgba(252, 245, 228, 0.7);
+}
+mat-panel-title {
+  color: #2b2b2c;
+  font-weight: 600;
+  font-size: 20px;
+}
+#download-btn {
+  background-color: #2b2b2c;
+  color: white;
+}
+#panel-text {
+  font-size: 18px;
+}
