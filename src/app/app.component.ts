@@ -1,13 +1,17 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'JustinOverview';
+export class AppComponent implements AfterViewInit, OnInit {
+  year;
 
+  ngOnInit() {
+    var d = new Date();
+    this.year = d.getFullYear();
+  }
   ngAfterViewInit() {
     
     let style = document.createElement('style');

@@ -81,3 +81,13 @@ p{
   display: inline-block;
   margin: 1%;
 }
+.footer {
+  background: rgba(252, 245, 228, 0.1);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
