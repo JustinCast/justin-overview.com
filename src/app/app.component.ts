@@ -20,5 +20,13 @@ export class AppComponent implements AfterViewInit, OnInit {
     document.getElementsByTagName('head')[0].appendChild(style);
     let ul = document.getElementsByClassName("mat-expansion-panel-content")
     ul[0].classList.add('background')
+
+    // mat-tab-label-container
+    let tabHeader = document.createElement('style');
+    tabHeader.type = 'text/css';
+    tabHeader.innerHTML = '.tab { background-color: white}';
+    document.getElementsByTagName('head')[0].appendChild(style);
+    let el = document.getElementsByClassName("mat-tab-label-container")
+    el[0].classList.add('tab')
   }
 }
