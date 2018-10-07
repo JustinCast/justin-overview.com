@@ -7,6 +7,9 @@
   display: inline-block;
   margin: 1%;
 }
+a {
+  font-size: 25px
+}
 nav {
   background-color: transparent;
   color: #fcf5e4;
