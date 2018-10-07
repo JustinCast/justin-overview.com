@@ -2,24 +2,21 @@
   <h3>Justin Castillo</h3>
   <div class="navbar-expand ml-auto navbar-nav">
     <div class="navbar-nav">
-      <a class="nav-item nav-link">
-        About
-      </a>
-      <a class="nav-item nav-link">
-        Experience
-      </a>
-      <a class="nav-item nav-link">
-        Projects
-      </a>
-      <a class="nav-item nav-link">
-        Contact
-      </a>
-      <!-- <a class="nav-item nav-link" href="/" target="_blank">
+      <a class="nav-item nav-link white" href="/" target="_blank">
         <i class="fa fa-instagram"></i>
       </a>
-      <a class="nav-item nav-link" href="/" target="_blank">
+      <a class="nav-item nav-link white" href="/" target="_blank">
         <i class="fa fa-facebook"></i>
-      </a> -->
+      </a>
+      <a class="nav-item nav-link white" href="/" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+      <a class="nav-item nav-link white" href="/" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a class="nav-item nav-link white" href="/" target="_blank">
+        <i class="fa fa-envelope"></i>
+      </a>
     </div>
   </div>
 </nav>
@@ -34,10 +31,84 @@
       <div id="panel-text" class="container mt-2">
         Visionary - I always say that the future is on the Web & cloud. GraphQL enthusiast and Web Assembly explorer.
       </div>
-      <hr>
+      <hr style="color: #c2bcb1">
       <div class="container">
         <button id="download-btn" mat-button>Download CV</button>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>
+<mat-tab-group class="card mt-4">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      About
+      <i class="material-icons ml-1">account_circle</i>
+    </ng-template>
+    <p>
+      I'm a student at Instituto Tecnológico de Costa Rica and actually I'm also
+      a Freelancer in my free time, currently I live in Aguas Zarcas, San Carlos. I really love Web Development and my favorite Framework is Angular but I also like JavaScript.
+      One of my favorites hobbies is make some exercise and see some series on Netflix.
+    </p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Projects
+      <i class="material-icons ml-1">playlist_add_check</i>
+    </ng-template>
+    <p>
+      I've already worked in important projects like 
+      <i>
+        Sistema de Gestión de Averías del Acueducto de la Municipalidad de San Carlos
+      </i>
+      wich was developed in Android from June 2017 to June 2018. <br>
+      I also developed 
+      <i>
+        <a href="https://arbol-esperanza.herokuapp.com">
+          Arbol de Esperanza Foundation Website
+        </a>
+      </i>
+      which was developed in Angular during 2018.
+    </p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Rate me
+      <i class="material-icons ml-1">work</i>
+      </ng-template>  
+    <p>
+      I've teach some <strong>Web Development Courses</strong> in Angular and HTML5 to TEC student. In addition I've make two conferences, 
+      one in 2017 for <i>Semana TEC Activity</i> wich name was "Introduction to TypeScript" and the other for <i>San Carlos Technology Summit 2018</i> wich name as
+      <strong>Introduction to GraphQL</strong>
+    </p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Rate me
+      <i class="material-icons ml-1">code</i>
+    </ng-template>  
+    <ul id="tech-ul container">
+      <li class="tech-li"><button color="warn" mat-raised-button>Angularjs</button></li>
+      <li class="tech-li"><button style="background: green; color: white" mat-raised-button>Nodejs</button></li>
+      <li class="tech-li"><button style="background: red; color: white" mat-raised-button>Angular 2+</button></li>
+      <li class="tech-li"><button style="background: #64DD17; color: white" mat-raised-button>MongoDB</button></li>
+      <li class="tech-li"><button style="background: #3E2723; color: white" mat-raised-button>MS SQL Server</button></li>
+      <li class="tech-li"><button style="background: #01579B; color: white" mat-raised-button>PostgresSQL</button></li>
+      <li class="tech-li"><button style="background: #B3E5FC; color: black" mat-raised-button>Bootstrap</button></li>
+      <li class="tech-li"><button style="background: #AA00FF; color: white" mat-raised-button>Angular Material</button></li>
+      <li class="tech-li"><button style="background: #7E57C2; color: white" mat-raised-button>GraphQL (beginner)</button></li>
+      <li class="tech-li"><button style="background: #FF4081; color: white" mat-raised-button>Apollo (beginner)</button></li>
+      <li class="tech-li"><button style="background: #304FFE; color: white" mat-raised-button>C#</button></li>
+      <li class="tech-li"><button style="background: #827717; color: white" mat-raised-button>Java</button></li>
+      <li class="tech-li"><button style="background: #EEFF41; color: black" mat-raised-button>JavaScript</button></li>
+      <li class="tech-li"><button style="background: #1DE9B6; color: black" mat-raised-button>C</button></li>
+      <li class="tech-li"><button style="background: #E8EAF6; color: black" mat-raised-button>C++</button></li>
+    </ul>
+  </mat-tab>
+  <mat-tab label="Extra Courses & Complementary"></mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Rate me
+      <i class="material-icons ml-1">star</i>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

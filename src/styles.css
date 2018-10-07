@@ -10,6 +10,3 @@ body {
   background-image: url('assets/fondo.png');
   background-repeat: no-repeat
 }
-:host /deep/ mat-expansion-panel .mat-expansion-panel-content {
-  color: black
-}

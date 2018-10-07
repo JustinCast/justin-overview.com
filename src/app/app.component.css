@@ -7,8 +7,13 @@
   display: inline-block;
   margin: 1%;
 }
-a {
-  font-size: 25px
+.white {
+  font-size: 25px;
+  cursor: pointer;
+  color: #fcf5e4
+}
+a:hover{
+  color: #3c3b3d
 }
 nav {
   background-color: transparent;
@@ -39,9 +44,40 @@ mat-panel-title {
   font-size: 20px;
 }
 #download-btn {
-  background-color: #2b2b2c;
-  color: white;
+  background-color: #c2bcb1;
+  color: #444344;
+  font-size: 15px
 }
 #panel-text {
   font-size: 18px;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #c2bcb1;
+  margin: 1em 0;
+  padding: 0;
+}
+
+mat-tab-group{
+  margin: auto;
+  width: 60%;
+  color: white;
+  background: rgba(255,255,255, 0.8)
+}
+p{
+  text-align: justify;
+  color: black;
+  margin: 2%;
+  font-size: 20px
+}
+#tech-ul{
+  margin: auto;
+  padding: 0;
+  list-style-type: none
+}
+.tech-li {
+  display: inline-block;
+  margin: 1%;
 }
