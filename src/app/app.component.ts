@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, OnInit } from "@angular/core";
+import { ApiManagementService } from "./api-management.service";
 //import * as download from "download-pdf";
 @Component({
   selector: "app-root",
@@ -8,6 +9,10 @@ import { Component, AfterViewInit, OnInit } from "@angular/core";
 export class AppComponent implements AfterViewInit, OnInit {
   year;
   pdf: string = "../assets/cv.pdf";
+
+  constructor(private _api: ApiManagementService) {
+
+  }
 
   ngOnInit() {
     var d = new Date();
@@ -32,14 +37,6 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   onDownloadClick() {
-    /*let options = {
-      directory: "../assets/",
-      filename: "cv.pdf"
-    };
-
-    download(this.pdf, options, function(err) {
-      if (err) throw err;
-      console.log(this.pdf);
-    });*/
+    this._api.downloadCV();
   }
 }

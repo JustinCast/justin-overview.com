@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { ProjectsComponent } from './projects/projects.component';
 import { ReviewComponent } from './review/review.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { ReviewComponent } from './review/review.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
