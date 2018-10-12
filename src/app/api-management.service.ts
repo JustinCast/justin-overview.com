@@ -10,7 +10,7 @@ export class ApiManagementService {
 
   constructor(private _http: HttpClient) { }
 
-  downloadCV() {
+  /*downloadCV() {
     this._http.get<any>(`${environment.SERVER_BASE_URL}download/cv`)
     .subscribe(
       success => {
@@ -22,12 +22,6 @@ export class ApiManagementService {
         downloadLink.setAttribute("download", 'cv.pdf');
         downloadLink.click();
         document.body.removeChild(downloadLink); // remove the element*/
-      },
-      (err: HttpErrorResponse) => {
-        this.errorHandler(err);
-      }
-    )
-  }
 
   errorHandler(err: HttpErrorResponse) {
 		if (err.error instanceof Error) {
