@@ -37,6 +37,5 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   onDownloadClick() {
-    this._api.downloadCV();
   }
 }
