@@ -33,10 +33,9 @@
       </div>
       <hr style="color: #c2bcb1">
       <div class="container">
-        <button id="download-btn" mat-button>
-          <a href="https://drive.google.com/open?id=1O6_Xyq8D2s_QwMIi2KVv_KtxynV2WQ6y">
-            Download CV
-          </a>
+        <button onClick="window.location='https://drive.google.com/open?id=1O6_Xyq8D2s_QwMIi2KVv_KtxynV2WQ6y';" 
+        id="download-btn" mat-stroked-button>
+            <span class="download-txt">Download CV</span>
         </button>
       </div>
     </mat-expansion-panel>
@@ -91,7 +90,7 @@
       <span class="m-0 header-tab">Tech Skills</span>
       <i class="material-icons ml-1 align">code</i>
     </ng-template>  
-    <ul id="tech-ul container">
+    <ul id="tech-ul">
       <li class="tech-li"><button color="warn" mat-raised-button>Angularjs</button></li>
       <li class="tech-li"><button style="background: green; color: white" mat-raised-button>Nodejs</button></li>
       <li class="tech-li"><button style="background: red; color: white" mat-raised-button>Angular 2+</button></li>
