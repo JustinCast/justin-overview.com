@@ -9,9 +9,12 @@ import { ApiManagementService } from "./api-management.service";
 export class AppComponent implements AfterViewInit, OnInit {
   year;
   pdf: string = "../assets/cv.pdf";
+  collapsed = true;
 
-  constructor(private _api: ApiManagementService) {
+  constructor(private _api: ApiManagementService) {}
 
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
   }
 
   ngOnInit() {
@@ -36,6 +39,5 @@ export class AppComponent implements AfterViewInit, OnInit {
     el[0].classList.add("tab");
   }
 
-  onDownloadClick() {
-  }
+  onDownloadClick() {}
 }

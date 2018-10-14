@@ -10,6 +10,7 @@ body {
   background-image: url('assets/fondo.png');
   background-repeat: no-repeat
 }
+
 .align {
   vertical-align: top;
   font-size: 25px;

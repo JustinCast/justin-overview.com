@@ -1,24 +1,24 @@
 <nav class="navbar navbar-expand-lg shadow-lg p-1 pl-4 pt-0 pr-4 mb-5">
-    <h3>Justin A. Castillo</h3>
-  <div class="navbar-expand ml-auto navbar-nav">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link white" href="https://www.instagram.com/justin1524/" target="_blank">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a class="nav-item nav-link white" href="https://www.facebook.com/justin.castillo.7503314" target="_blank">
-        <i class="fa fa-facebook"></i>
-      </a>
-      <a class="nav-item nav-link white" href="https://github.com/JustinCast" target="_blank">
-        <i class="fa fa-github"></i>
-      </a>
-      <a class="nav-item nav-link white" href="https://www.linkedin.com/in/justin-alberto-castillo-valladares-82723a121" target="_blank">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <!-- <a class="nav-item nav-link white" href="/" target="_blank">
-        <i class="fa fa-envelope"></i>
-      </a> -->
+    <span class="navbar-brand" href="#">Justin A. Castillo</span>
+    <button (click)="toggleCollapsed()" class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span style="color: white" class="navbar-toggler-icon"><i class="material-icons align">menu</i></span>
+    </button>
+    <div class="animated fadeIn faster" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}" id="navbarSupportedContent">
+      <div class="navbar-expand ml-auto navbar-nav">
+        <a class="nav-item nav-link white social" href="https://www.instagram.com/justin1524/" target="_blank">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a class="nav-item nav-link white social" href="https://www.facebook.com/justin.castillo.7503314" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a class="nav-item nav-link white social" href="https://github.com/JustinCast" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a class="nav-item nav-link white social" href="https://www.linkedin.com/in/justin-alberto-castillo-valladares-82723a121" target="_blank">
+          <i class="fa fa-linkedin"></i>
+        </a>
+      </div>
     </div>
-  </div>
 </nav>
 <div class="container text-center mt-8">
   <img class="card shadow-sm p-1"  id="avatar" src="../assets/avatar.png" alt="avatar">
@@ -45,7 +45,7 @@
 <mat-tab-group class="shadow-lg p-0 pt-0 mb-5 rounded card mt-4">
   <mat-tab style="color: black">
     <ng-template mat-tab-label>
-      <h5 class="m-0">About</h5>
+      <span class="m-0 header-tab">About</span>
       <i class="material-icons ml-1 align">account_circle</i>
     </ng-template>
     <p>
@@ -56,7 +56,7 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <h5 class="m-0">Projects</h5>
+      <span class="m-0 header-tab">Projects</span>
       <i class="material-icons ml-1 align">playlist_add_check</i>
     </ng-template>
     <p>
@@ -76,7 +76,7 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <h5 class="m-0">Experience</h5>
+      <span class="m-0 header-tab">Experience</span>
       <i class="material-icons ml-1 align">work</i>
       </ng-template>  
     <p>
@@ -88,7 +88,7 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <h5 class="m-0">Tech Skills</h5>
+      <span class="m-0 header-tab">Tech Skills</span>
       <i class="material-icons ml-1 align">code</i>
     </ng-template>  
     <ul id="tech-ul container">
@@ -111,7 +111,7 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <h5 class="m-0">Extra Courses & Complementary</h5>
+      <span class="m-0 header-tab">Extra Courses & Complementary</span>
       <i class="material-icons ml-1 align">assignment</i>
     </ng-template>
     <ul id="complementary-ul">
@@ -122,7 +122,7 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <h5 class="m-0">Rate me</h5>
+      <span class="m-0 header-tab">Rate me</span>
       <i class="material-icons ml-1 align">star</i>
     </ng-template>
   </mat-tab>
