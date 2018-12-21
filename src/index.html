@@ -1,17 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>JustinOverview</title>
-  <base href="/">
+  <head>
+    <meta charset="utf-8" />
+    <title>JustinOverview</title>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"
+    />
+  </head>
+  <body>
+    <script>
+      window.onload = function() {
+        Particles.init({
+          selector: ".background",
+          speed: 0.5,
+          color: ["#FFFFFF", "#FFFFFF", "#FFFFFF"],
+          connectParticles: true
+        });
+      };
+      </script>
+    <canvas class="background"></canvas>
+    <app-root></app-root>
+  </body>
 </html>
