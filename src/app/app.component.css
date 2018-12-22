@@ -148,7 +148,7 @@ a:hover {
 nav {
   background-color: transparent;
   color: #3c3b3d;
-  background-image: linear-gradient(to right, #cfccd2, transparent);
+  background: transparent;
   font-weight: 200;
 }
 #avatar {
