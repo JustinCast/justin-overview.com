@@ -121,13 +121,6 @@
     margin-left: 5%;
   }
 }
-.download-txt {
-}
-.social {
-}
-
-.header-tab {
-}
 #link-ul {
   list-style-type: none;
   width: 70%;
@@ -171,8 +164,6 @@ mat-panel-title {
 }
 #download-btn {
   font-size: 15px;
-}
-#panel-text {
 }
 hr {
   display: block;
