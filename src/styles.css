@@ -4,12 +4,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-html,
-body {
+html {
   font-family: "Open Sans", sans-serif;
-  background-color: linear-gradient(315deg, #ea9797 0%, #ff0000 74%);
-  background-image: linear-gradient(315deg, #ea9797 0%, #ff0000 74%);
+  background-image: linear-gradient(315deg, rgba(61,58,57,1) 0%, #ff0000 74%);
   background-repeat: no-repeat;
+}
+body{
+  background: transparent
 }
 
 .align {

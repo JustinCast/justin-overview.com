@@ -143,16 +143,23 @@ nav {
   color: #3c3b3d;
   background: transparent;
   font-weight: 200;
-}
-#avatar {
-  border: 3px solid #fcf5e4;
-  background-color: transparent;
-  border-radius: 110px;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 1%;
+  border-radius: 30px;
+  width: 95%;
+  background: linear-gradient(90deg, rgba(61,58,57,1) 0%, rgba(133,27,27,1) 33%, rgba(255,0,40,1) 100%);
+}
+
+#avatar {
+  border: 3px solid #00009C;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 3%;
 }
 #avatar:hover {
   background-color: #fcf5e4;
+  background-image: url('../assets/octocat.png');
   border: 3px solid black;
 }
 mat-expansion-panel {
