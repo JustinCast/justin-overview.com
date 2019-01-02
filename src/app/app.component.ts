@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   collapsed = true;
   technologies: Array<Card> = [
     { name: "Angularjs", img: "../assets/angularjs.png" },
+    { name: "TypeScript", img: "../assets/typescript.png" },
     { name: "Python", img: "../assets/python.png" },
     { name: "Android", img: "../assets/android.png" },
     { name: "Html5", img: "../assets/html.png" },
