@@ -41,6 +41,25 @@
         });
       };
     </script>
+    <script>
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        console.log(document.documentElement.scrollTop);
+        console.log("||||||||||||||||||||||||||");
+        if (document.documentElement.scrollTop > 100
+        ) {
+          document.getElementById("avatar").style.height = "20%";
+          document.getElementById("avatar").style.width = "20%";
+        } else if(document.documentElement.scrollTop) {
+          document.getElementById("avatar").style.height = "30%";
+          document.getElementById("avatar").style.width = "30%";
+        }
+      }
+    </script>
     <canvas class="background"></canvas>
     <app-root></app-root>
   </body>

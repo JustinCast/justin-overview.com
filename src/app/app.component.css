@@ -154,6 +154,7 @@ nav {
   background-color: transparent;
   margin: auto;
   margin-top: 3%;
+  transition: width 1s;
 }
 #avatar:hover {
   background-color: #fcf5e4;
@@ -232,4 +233,8 @@ h5 {
 }
 .comp-li {
   color: #2b2b2c;
+}
+#header{
+  width: 100%;
+  transition: 0.2s;
 }
