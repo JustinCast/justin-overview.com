@@ -1,26 +1,27 @@
 <nav class="navbar navbar-expand-lg shadow p-1 pl-4 pt-0 pr-4 mb-5">
   <span class="navbar-brand text-white">Justin A. Castillo V.</span>
-    <button (click)="toggleCollapsed()" class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span style="color: white" class="navbar-toggler-icon"><i class="material-icons align">menu</i></span>
-    </button>
-    <div class="navbar-expand ml-auto navbar-nav">
-      <a class="nav-item nav-link white social" href="https://www.instagram.com/justin1524/" target="_blank">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a class="nav-item nav-link white social" href="https://www.facebook.com/justin.castillo.7503314" target="_blank">
-        <i class="fa fa-facebook"></i>
-      </a>
-      <a class="nav-item nav-link white social" href="https://github.com/JustinCast" target="_blank">
-        <i class="fa fa-github"></i>
-      </a>
-      <a class="nav-item nav-link white social" href="https://www.linkedin.com/in/justin-alberto-castillo-valladares-82723a121" target="_blank">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </div>
+  <button mat-button class="ml-2 heartbeat"(click)="_dialog.openTimeLine()" >My timeline</button>
+  <button (click)="toggleCollapsed()" class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span style="color: white" class="navbar-toggler-icon"><i class="material-icons align">menu</i></span>
+  </button>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <a class="nav-item nav-link white social" href="https://www.instagram.com/justin1524/" target="_blank">
+      <i class="fa fa-instagram"></i>
+    </a>
+    <a class="nav-item nav-link white social" href="https://www.facebook.com/justin.castillo.7503314" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a class="nav-item nav-link white social" href="https://github.com/JustinCast" target="_blank">
+      <i class="fa fa-github"></i>
+    </a>
+    <a class="nav-item nav-link white social" href="https://www.linkedin.com/in/justin-alberto-castillo-valladares-82723a121" target="_blank">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </div>
 </nav>
 <div id="main-container" class="container text-center mt-8">
   <img class=""  id="avatar" src="../assets/octocat.png" alt="avatar">
-  <h1 class="text-white m-4">FullStack Engineer</h1>
+  <h1 class="text-white m-2">FullStack Engineer</h1>
   <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>

@@ -8,12 +8,14 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ReviewComponent } from './review/review.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
+import { TimeLineComponent } from './dialogs/time-line/time-line.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
-    ReviewComponent
+    ReviewComponent,
+    TimeLineComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
+  entryComponents: [
+    TimeLineComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

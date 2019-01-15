@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, OnInit } from "@angular/core";
 import { ApiManagementService } from "./api-management.service";
 import { Card } from "./models/card";
+import { DialogManagerService } from "./dialogs/dialog-manager.service";
 //import * as download from "download-pdf";
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements AfterViewInit, OnInit {
   year;
@@ -33,7 +34,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     { name: "C++", img: "../assets/c++.png" }
   ];
 
-  constructor(private _api: ApiManagementService) {}
+  constructor(private _api: ApiManagementService, private _dialog: DialogManagerService) {}
 
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
