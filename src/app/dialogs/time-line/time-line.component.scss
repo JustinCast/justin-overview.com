@@ -15,16 +15,20 @@ a {
   }
 }
 
-div.container {
+#main-container {
   display: flex;
   flex: auto;
   flex-direction: column;
   max-height: 100%;
+  width: 100%;
 }
 div.header {
   height: auto;
   text-align: center;
-  background-image: linear-gradient(315deg, rgba(61,58,57,1) 0%, #ff0000 74%);
+  background-image: url('../../../assets/time.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+//   background-image: linear-gradient(315deg, rgba(61,58,57,1) 0%, #ff0000 74%);
   color: ghostwhite;
   padding: 2.3rem 1rem 2.3rem 1rem;
   position: relative;
@@ -50,12 +54,12 @@ div.header {
     }
     font: {
       weight: 200;
-      size: 1.6em;
+      size: 3em;
     }
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     @media (min-width: 62em) {
-      font-size: 1.9em;
+      font-size: 3em;
       letter-spacing: 0.2rem;
     }
   }
@@ -156,7 +160,7 @@ div.item {
         content: '';
         width: 10px;
         height: 10px;
-        background: #C5C5C5;
+        background: red;
         border: 2px solid #FFFFFF;
         @include border-radius(50%);
         position: absolute;
