@@ -34,7 +34,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     { name: "C++", img: "../assets/c++.png" }
   ];
 
-  constructor(private _api: ApiManagementService, private _dialog: DialogManagerService) {}
+  constructor(private _api: ApiManagementService, public _dialog: DialogManagerService) {}
 
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
