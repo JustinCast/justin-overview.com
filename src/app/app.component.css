@@ -156,11 +156,6 @@ nav {
   margin-top: 3%;
   transition: width 1s;
 }
-#avatar:hover {
-  background-color: #fcf5e4;
-  background-image: url('../assets/octocat.png');
-  border: 3px solid black;
-}
 mat-expansion-panel {
   margin: auto;
   background-color: rgba(229, 225, 232, 0.7);
