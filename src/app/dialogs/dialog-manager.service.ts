@@ -12,7 +12,8 @@ export class DialogManagerService {
   openTimeLine(): void {
     this.dialog.open(TimeLineComponent, {
       width: '90%',
-      height: '85%'
+      height: '85%',
+      panelClass: 'dialog'
     });
   }
 }
