@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg shadow p-1 pl-4 pt-0 pr-4 mb-5">
   <span class="navbar-brand text-white">Justin A. Castillo V.</span>
-  <div class="navbar-expand ml-auto navbar-nav">
-    <a class="nav-item nav-link white social" href="https://github.com/JustinCast" target="_blank">
+  <div class="navbar-expand ml-auto navbar-nav social">
+    <a class="nav-item nav-link white" href="https://github.com/JustinCast" target="_blank">
       <i class="fa fa-github"></i>
     </a>
-    <a class="nav-item nav-link white social ml-0" href="https://www.linkedin.com/in/jacv" target="_blank">
+    <a class="nav-item nav-link white" href="https://www.linkedin.com/in/jacv" target="_blank">
       <i class="fa fa-linkedin"></i>
     </a>
   </div>
@@ -12,7 +12,9 @@
 <div id="main-container" class="container text-center mt-8">
   <img class=""  id="avatar" src="../assets/octocat.png" alt="avatar">
   <h1 class="text-white m-2">FullStack Engineer</h1>
-  <button mat-button class="heartbeat mb-2"(click)="_dialog.openTimeLine()" >My timeline</button>
+  <button id="time-line-button" mat-raised-button class="mb-2 shadow"(click)="_dialog.openTimeLine()">
+    My timeline
+  </button>
   <mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
