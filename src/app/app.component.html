@@ -39,7 +39,7 @@
     </ng-template>
     <p>
       I'm a student at Instituto Tecnológico de Costa Rica and actually I'm also
-      a Freelancer in my free time, currently I live in Aguas Zarcas, San Carlos. I really love Web Development and my favorite Framework is Angular but I also like JavaScript.
+      a Freelancer in my free time. Currently I live in Aguas Zarcas, San Carlos. I really love Web Development and my favorite Framework is Angular.
       One of my favorites hobbies is make some exercise and see some series on Netflix.
     </p>
   </mat-tab>
@@ -54,24 +54,11 @@
         Sistema de Gestión de Averías del Acueducto de la Municipalidad de San Carlos
       </i>
       wich was developed in Android from June 2017 to June 2018. <br>
-      I also developed 
-      <i>
-        <a href="https://arbol-esperanza.herokuapp.com">
-          Arbol de Esperanza Foundation Website
-        </a>
-      </i>
-      which was developed in Angular during 2018. <br>
-      actually, I'm developing a website for 
-      <i>
-        <a href="">SantuarioNatura</a>
-      </i>
-      Startup in Sarapiquí with my dev partner <a href="https://github.com/luisCarlosGonzalezCalderon">Luis González</a>.
     </p>
     <p>
-      I've teach some <strong>Web Development Courses</strong> in Angular and HTML5 to TEC student. In addition I've make two conferences, 
-      one in 2017 for <i>Semana TEC Activity</i> wich name was "Introduction to TypeScript" and the other for <i>San Carlos Technology Summit 2018</i> wich name as
-      <strong>Introduction to GraphQL</strong>.
-      In 2017 I travel to UNAN León - Nicaragua to teach how to build Nodejs Aplications with TypeScript.
+      I've teach some <strong>Web Development Courses</strong> in Angular and HTML5 to TEC students. In addition I've make serveral
+      conferences to studentes and people in San Carlos.
+      If you want to know more about me, go and see my <strong>TimeLine.</strong>
     </p>
   </mat-tab>
   <mat-tab>
@@ -79,11 +66,11 @@
       <span class="m-0 header-tab">Tech Skills</span>
       <i class="material-icons ml-1 align">code</i>
     </ng-template>  
-    <ul id="tech-ul">
-      <li class="tech-li card shadow p-3 text-center" *ngFor="let t of technologies">
+    <ul id="tech-ul" class="text-center">
+      <li class="tech-li card shadow p-2 text-center" *ngFor="let t of technologies">
         <img src="{{t.img}}" alt="{{t.name}}" class="tech-img">
         <hr class="h-line">
-        <h6 class="text-center text-danger">{{t.name}}</h6>
+        <p class="text-center text-danger tech-name">{{t.name}}</p>
       </li>
     </ul>
   </mat-tab>

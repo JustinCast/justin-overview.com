@@ -11,7 +11,7 @@
 }
 @media screen and (max-width: 700px) {
   .header-tab {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 601px) {
@@ -121,6 +121,49 @@
     margin-left: 5%;
   }
 }
+
+@media screen and (min-width: 601px) {
+  .tech-li {
+    width: 14%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tech-li {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .tech-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tech-img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .tech-name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tech-name {
+    font-size: 15px;
+  }
+}
+
+/*FIN MEDIA QUERIES*/
+.tech-li:hover{
+  border: 1px solid red
+}
 #link-ul {
   list-style-type: none;
   width: 70%;
@@ -185,8 +228,7 @@ p {
   /*font-size: 2vw*/
 }
 .tech-img {
-  width: 120px;
-  height: 120px;
+  border: 0.1px transparent;
 }
 #tech-ul {
   width: 100%;
@@ -197,7 +239,7 @@ p {
 .tech-li {
   font-size: 25px;
   display: inline-block;
-  margin: 1%;
+  margin: 0.5%;
   background-color: rgba(255, 255, 255, 0.7);
 }
 .h-line {
