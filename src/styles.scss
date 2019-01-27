@@ -10,7 +10,11 @@ html {
   background-repeat: no-repeat;
 }
 body{
-  background: transparent
+  background: transparent;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 .align {
