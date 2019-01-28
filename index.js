@@ -30,7 +30,7 @@ function routerConfig() {
   // Serve static files
   app.use(express.static(__dirname + "/dist/JustinOverview"));
 
-  app.use("/download", api);
+  app.use("/api/rest/", api);
   // Send all requests to index.html
   app.get("/*", function(req, res) {
     res.sendFile(path.join(__dirname + "/dist/JustinOverview/index.html"));

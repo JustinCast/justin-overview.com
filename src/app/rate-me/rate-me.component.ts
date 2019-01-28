@@ -19,6 +19,7 @@ export class RateMeComponent implements OnInit {
     this.rateMeGroup = this._fb.group({
       'fullname': ["", Validators.required],
       'meet': ["", Validators.required],
+      'email': ["", Validators.required],
       'phone': ["", Validators.required],
       'country': ["", Validators.required],
       'comment': ["", Validators.required]

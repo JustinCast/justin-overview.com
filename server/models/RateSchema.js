@@ -20,6 +20,11 @@ const RateSchema = new mongoose.Schema({
   Comment: {
     type: String,
     required: true
+  },
+  Accepted: {
+    type: Boolean,
+    required: true,
+    default: false
   }
 });
 

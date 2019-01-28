@@ -8,6 +8,10 @@
   </mat-form-field>
   <br>
   <mat-form-field>
+    <input matInput [formControl]="rateMeGroup.get('email')" type="text" placeholder="Email">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
     <mat-select [formControl]="rateMeGroup.get('meet')" placeholder="Select the best option for you">
       <mat-option *ngFor="let o of options" [value]="o">
         {{o}}
