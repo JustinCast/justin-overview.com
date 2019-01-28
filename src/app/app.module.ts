@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TimeLineComponent } from './dialogs/time-line/time-line.component';
 import { RateMeComponent } from './rate-me/rate-me.component';
 import { ROUTES } from './app.routing';
-
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,9 @@ import { ROUTES } from './app.routing';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   entryComponents: [

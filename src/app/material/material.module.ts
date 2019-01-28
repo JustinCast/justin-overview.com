@@ -6,7 +6,10 @@ import {
   MatTabsModule,
   MatChipsModule,
   MatIconModule,
-  MatDialogModule
+  MatDialogModule,
+  MatInputModule,
+  MatSelectModule,
+  MatProgressBarModule
 } from "@angular/material";
 @NgModule({
   imports: [
@@ -16,7 +19,10 @@ import {
     MatTabsModule,
     MatChipsModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatProgressBarModule
   ],
   exports: [
     MatExpansionModule,
@@ -24,7 +30,10 @@ import {
     MatTabsModule,
     MatChipsModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatProgressBarModule
   ],
   declarations: []
 })

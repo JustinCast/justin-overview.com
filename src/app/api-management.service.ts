@@ -7,8 +7,17 @@ import * as jsPDF from 'jspdf'
   providedIn: 'root'
 })
 export class ApiManagementService {
-
+  countries: Array<any>;
   constructor(private _http: HttpClient) { }
+
+  getCountries(): void {
+    this._http.get<any>("https://restcountries.eu/rest/v2/all").subscribe(
+      data => {this.countries = data; console.log(data)},
+      (err: HttpErrorResponse) => {
+        this.errorHandler(err);
+      }
+    );
+  }
 
   /*downloadCV() {
     this._http.get<any>(`${environment.SERVER_BASE_URL}download/cv`)

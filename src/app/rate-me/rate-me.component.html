@@ -1,3 +1,32 @@
-<p>
-  rate-me works!
-</p>
+<form *ngIf="_management.countries; else loading" [formGroup]="rateMeGroup" class="text-center container mt-2 mb-2" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput [formControl]="rateMeGroup.get('fullname')" type="text" placeholder="Name and last name">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select [formControl]="rateMeGroup.get('meet')" placeholder="Select the best option for you">
+      <mat-option *ngFor="let o of options" [value]="o">
+        {{o}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-select [formControl]="rateMeGroup.get('country')" placeholder="Country">
+      <mat-option *ngFor="let c of _management.countries" [value]="o">
+        <span><strong>{{c.callingCodes[0]}}</strong></span>{{c.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+  <div class="container text-center">
+    <button mat-raised-button color="primary" [disabled]="!rateMeGroup.valid"><mat-icon>check</mat-icon></button>
+  </div>
+</form>
+
+<ng-template #loading>
+  <mat-progress-bar>Collecting data..</mat-progress-bar>
+</ng-template>
