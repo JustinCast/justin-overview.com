@@ -24,7 +24,7 @@ export class ApiManagementService {
   saveRate(rate: Rate) {
     this._http.post(`${environment.SERVER_BASE_URL}saveRate`, rate).subscribe(
       () => {
-        this.openSnackBar('Rate was send successfully', 'Ok', 3000);
+        this.openSnackBar('Rate was sent successfully', 'Ok', 3000);
       },
       (err: HttpErrorResponse) => {
         this.errorHandler(err);
