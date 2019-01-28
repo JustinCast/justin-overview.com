@@ -20,6 +20,7 @@ export class RateMeComponent implements OnInit {
       'fullname': ["", Validators.required],
       'meet': ["", Validators.required],
       'phone': ["", Validators.required],
+      'country': ["", Validators.required],
       'comment': ["", Validators.required]
     });
   }

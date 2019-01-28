@@ -12,7 +12,7 @@ export class ApiManagementService {
 
   getCountries(): void {
     this._http.get<any>("https://restcountries.eu/rest/v2/all").subscribe(
-      data => {this.countries = data; console.log(data)},
+      data => {this.countries = data; console.log(data);},
       (err: HttpErrorResponse) => {
         this.errorHandler(err);
       }
