@@ -12,7 +12,7 @@
   </mat-form-field>
   <br>
   <mat-form-field>
-    <mat-select [formControl]="rateMeGroup.get('meet')" placeholder="Select the best option for you">
+    <mat-select [formControl]="rateMeGroup.get('meet')" placeholder="How do you know about me?">
       <mat-option *ngFor="let o of options" [value]="o">
         {{o}}
       </mat-option>
