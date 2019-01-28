@@ -26,6 +26,8 @@ function config() {
     next();
   });
 }
+// MONGO DB URI
+// mongodb://heroku_v0xw7jkl:q3mrb4h7n24gl8c6jl3shktk8v@ds113815.mlab.com:13815/heroku_v0xw7jkl
 
 function routerConfig() {
   // Serve static files
