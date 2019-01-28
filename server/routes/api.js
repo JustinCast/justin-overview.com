@@ -1,8 +1,9 @@
 const express = require("express"),
   router = express.Router();
 const RateCTRL = require("./RateController");
-router.post("/saveRate", RateCTRL.saveRate);
+router.get("/getReviews", RateCTRL.getReviews);
+router.post("/saveReview", RateCTRL.saveReview);
 router.post("/sendApprovalEmail", RateCTRL.sendApprovalEmail);
-router.put("/updateRate/:rate_id", RateCTRL.updatedRate);
+router.put("/updateReview/:rate_id", RateCTRL.updatedReview);
 
 module.exports = router;

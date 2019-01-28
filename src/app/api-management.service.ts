@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import * as jsPDF from 'jspdf'
-import { Rate } from './models/Rate';
+import { Review } from './models/Review';
 import { MatSnackBar } from '@angular/material';
 
 @Injectable({
@@ -21,8 +21,12 @@ export class ApiManagementService {
     );
   }
 
-  saveRate(rate: Rate) {
-    this._http.post(`${environment.SERVER_BASE_URL}saveRate`, rate).subscribe(
+  getReviews() {
+    this._http.get<Array<Review>>(`${environment.SERVER_BASE_URL}getRevies`)
+  }
+
+  saveReview(rate: Review) {
+    this._http.post(`${environment.SERVER_BASE_URL}saveReview`, rate).subscribe(
       () => {
         this.openSnackBar('Rate was sent successfully', 'Ok', 3000);
       },

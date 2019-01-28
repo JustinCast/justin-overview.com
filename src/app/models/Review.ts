@@ -1,4 +1,4 @@
-export class Rate {
+export class Review {
   constructor(
     public fullName?: string,
     public meetWay?: string,

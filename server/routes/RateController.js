@@ -1,7 +1,17 @@
 "use strict";
 var Rate = require("../models/RateSchema");
 
-function saveRate(req, res) {
+function getReviews(req, res) {
+  Rate.find({})
+    .then(reviews => {
+      res.status(200).send(reviews);
+    })
+    .catch(err => {
+      handleError(err, res);
+    });
+}
+
+function saveReview(req, res) {
   let rate = new Rate(req.body);
   rate.save((err, savedRate) => {
     if (err)
@@ -9,19 +19,19 @@ function saveRate(req, res) {
         .status(500)
         .send({ message: `Error al guardar el documento: ${err}` });
     else {
-        res.status(200).send({ message: `Documento guardado con éxito` });
-        sendApprovalEmail(savedRate);
+      res.status(200).send({ message: `Documento guardado con éxito` });
+      sendApprovalEmail(savedRate);
     }
   });
 }
 
-function updateRate(req, res) {
+function updateReview(req, res) {
   Rate.findById(req.params.rate_id, function(err, rate) {
-    if (err) return handleError(err);
+    if (err) return handleError(err, res);
 
     rate.accepted = true;
     rate.save(function(err, updatedRate) {
-      if (err) return handleError(err);
+      if (err) return handleError(err, res);
       res.send(updatedRate);
     });
   });
@@ -45,11 +55,15 @@ function sendApprovalEmail(data) {
     }
   };
   sgMail.send(msg);
+}
 
+function handleError(err, res) {
+  res.status(500).send(err);
 }
 
 module.exports = {
-  saveRate: saveRate,
+  saveReview: saveReview,
   sendApprovalEmail: sendApprovalEmail,
-  updatedRate: updateRate
+  updateReview: updateReview,
+  getReviews: getReviews
 };

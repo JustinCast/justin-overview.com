@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ApiManagementService } from "../api-management.service";
-import { Rate } from "../models/Rate";
+import { Review } from "../models/Review";
 
 @Component({
   selector: "app-rate-me",
@@ -35,7 +35,7 @@ export class RateMeComponent implements OnInit {
   }
 
   onSubmit() {
-    this._management.saveRate(new Rate(
+    this._management.saveReview(new Review(
       this.rateMeGroup.get('fullname').value,
       this.rateMeGroup.get('meet').value,
       this.rateMeGroup.get('email').value,
