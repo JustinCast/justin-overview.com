@@ -8,7 +8,7 @@ import { MatDialogRef } from '@angular/material';
 })
 export class TimeLineComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<TimeLineComponent>,) { }
+  constructor(public dialogRef: MatDialogRef<TimeLineComponent>) { }
 
   ngOnInit() {
   }
