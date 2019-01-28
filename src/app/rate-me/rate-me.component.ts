@@ -44,5 +44,6 @@ export class RateMeComponent implements OnInit {
       this.rateMeGroup.get('comment').value,
       false
     ));
+    this.rateMeGroup.reset();
   }
 }
