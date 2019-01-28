@@ -18,7 +18,7 @@ export class RateMeComponent implements OnInit {
   ];
   constructor(
     private _fb: FormBuilder,
-    private _management: ApiManagementService
+    public _management: ApiManagementService
   ) {
     this.rateMeGroup = this._fb.group({
       fullname: ["", Validators.required],
