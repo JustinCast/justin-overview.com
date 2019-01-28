@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ApiManagementService } from '../api-management.service';
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { ApiManagementService } from "../api-management.service";
+import { Rate } from "../models/Rate";
 
 @Component({
-  selector: 'app-rate-me',
-  templateUrl: './rate-me.component.html',
-  styleUrls: ['./rate-me.component.scss']
+  selector: "app-rate-me",
+  templateUrl: "./rate-me.component.html",
+  styleUrls: ["./rate-me.component.scss"]
 })
 export class RateMeComponent implements OnInit {
   rateMeGroup: FormGroup;
@@ -15,14 +16,17 @@ export class RateMeComponent implements OnInit {
     "I've heard about you",
     "I saw your profile on Github"
   ];
-  constructor(private _fb: FormBuilder, private _management: ApiManagementService) { 
+  constructor(
+    private _fb: FormBuilder,
+    private _management: ApiManagementService
+  ) {
     this.rateMeGroup = this._fb.group({
-      'fullname': ["", Validators.required],
-      'meet': ["", Validators.required],
-      'email': ["", Validators.required],
-      'phone': ["", Validators.required],
-      'country': ["", Validators.required],
-      'comment': ["", Validators.required]
+      fullname: ["", Validators.required],
+      meet: ["", Validators.required],
+      email: ["", Validators.required],
+      phone: ["", Validators.required],
+      country: ["", Validators.required],
+      comment: ["", Validators.required]
     });
   }
 
@@ -30,4 +34,15 @@ export class RateMeComponent implements OnInit {
     this._management.getCountries();
   }
 
+  onSubmit() {
+    this._management.saveRate(new Rate(
+      this.rateMeGroup.get('fullname').value,
+      this.rateMeGroup.get('meet').value,
+      this.rateMeGroup.get('email').value,
+      this.rateMeGroup.get('phone').value,
+      this.rateMeGroup.get('country').value,
+      this.rateMeGroup.get('comment').value,
+      false
+    ));
+  }
 }

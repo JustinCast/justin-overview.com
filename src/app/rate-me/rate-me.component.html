@@ -21,7 +21,7 @@
   <br>
   <mat-form-field>
     <mat-select [formControl]="rateMeGroup.get('country')" placeholder="Country">
-      <mat-option *ngFor="let c of _management.countries" [value]="o">
+      <mat-option *ngFor="let c of _management.countries" [value]="c.name">
         {{c.name}}
       </mat-option>
     </mat-select>

@@ -2,7 +2,6 @@
 var Rate = require("../models/RateSchema");
 
 function saveRate(req, res) {
-  console.log(req.body);
   let rate = new Rate(req.body);
   rate.save((err, savedRate) => {
     if (err)
@@ -11,7 +10,7 @@ function saveRate(req, res) {
         .send({ message: `Error al guardar el documento: ${err}` });
     else {
         res.status(200).send({ message: `Documento guardado con éxito` });
-        updateRate(savedRate);
+        sendApprovalEmail(savedRate);
     }
   });
 }
@@ -29,6 +28,7 @@ function updateRate(req, res) {
 }
 
 function sendApprovalEmail(data) {
+  console.log(data);
   const sgMail = require("@sendgrid/mail");
   sgMail.setApiKey(
     process.env.SENDGRID_API_KEY ||
@@ -41,7 +41,7 @@ function sendApprovalEmail(data) {
     dynamic_template_data: {
       fullname: data.fullname,
       comment: data.comment,
-      rate_id: data.id
+      rate_id: data._id
     }
   };
   sgMail.send(msg);

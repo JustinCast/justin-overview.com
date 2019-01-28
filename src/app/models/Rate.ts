@@ -6,7 +6,7 @@ export class Rate {
     public phone?: string,
     public country?: string,
     public comment?: string,
-    public accepted?: string,
+    public accepted?: boolean,
     public _id?: any
   ) {}
 }

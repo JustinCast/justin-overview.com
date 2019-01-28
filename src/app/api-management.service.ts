@@ -2,17 +2,30 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import * as jsPDF from 'jspdf'
+import { Rate } from './models/Rate';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiManagementService {
   countries: Array<any>;
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: HttpClient, private _snackBar: MatSnackBar) { }
 
   getCountries(): void {
     this._http.get<any>("https://restcountries.eu/rest/v2/all").subscribe(
       data => {this.countries = data; console.log(data);},
+      (err: HttpErrorResponse) => {
+        this.errorHandler(err);
+      }
+    );
+  }
+
+  saveRate(rate: Rate) {
+    this._http.post(`${environment.SERVER_BASE_URL}saveRate`, rate).subscribe(
+      () => {
+        this.openSnackBar('Rate was send successfully', 'Ok', 3000);
+      },
       (err: HttpErrorResponse) => {
         this.errorHandler(err);
       }
@@ -42,7 +55,13 @@ export class ApiManagementService {
       /*var doc = new jsPDF()
       doc.text(err.error.text, 10, 10)
       doc.save('cv.pdf')*/
-			console.log(`${err.error.text}`);
+			console.log(`${JSON.stringify(err)}`);
 		}
-	}
+  }
+  
+  openSnackBar(message: string, action: string, duration: number) {
+    this._snackBar.open(message, action, {
+      duration: duration,
+    });
+  }
 }

@@ -1,27 +1,31 @@
 const mongoose = require("mongoose");
 
 const RateSchema = new mongoose.Schema({
-  FullName: {
+  fullName: {
     type: String,
     required: true
   },
-  MeetWay: {
+  meetWay: {
     type: String,
     required: true
   },
-  Phone: {
+  email: {
     type: String,
     required: true
   },
-  Country: {
+  phone: {
     type: String,
     required: true
   },
-  Comment: {
+  country: {
     type: String,
     required: true
   },
-  Accepted: {
+  comment: {
+    type: String,
+    required: true
+  },
+  accepted: {
     type: Boolean,
     required: true,
     default: false
