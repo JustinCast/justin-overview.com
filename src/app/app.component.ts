@@ -43,6 +43,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     var d = new Date();
     this.year = d.getFullYear();
+    this._api.getReviews();
   }
   ngAfterViewInit() {}
 

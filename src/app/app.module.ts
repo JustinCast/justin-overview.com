@@ -5,19 +5,19 @@ import { RouterModule } from "@angular/router";
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { ProjectsComponent } from './projects/projects.component';
-import { ReviewComponent } from './review/review.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TimeLineComponent } from './dialogs/time-line/time-line.component';
 import { RateMeComponent } from './rate-me/rate-me.component';
 import { ROUTES } from './app.routing';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ReviewsComponent } from './dialogs/reviews/reviews.component';
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
-    ReviewComponent,
     TimeLineComponent,
-    RateMeComponent
+    RateMeComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
   ],
   providers: [],
   entryComponents: [
-    TimeLineComponent
+    TimeLineComponent,
+    ReviewsComponent
   ],
   bootstrap: [AppComponent]
 })
