@@ -1,26 +1,26 @@
-<nav class="navbar navbar-expand-lg shadow p-1 pl-4 pt-0 pr-4 mb-5">
-  <span class="navbar-brand text-white">Justin A. Castillo V.</span>
+<nav class="navbar navbar-expand-sm pt-0 pb-0 shadow pl-4 pr-4 mb-4">
+  <span class="navbar-brand text-white m-0 p-0">Justin A. Castillo V.</span>
   <div class="navbar-expand ml-auto navbar-nav social">
-    <a class="nav-item nav-link white" href="https://github.com/JustinCast" target="_blank">
+    <a class="nav-item nav-link white p-1 m-0" href="https://github.com/JustinCast" target="_blank">
       <i class="fa fa-github"></i>
     </a>
-    <a class="nav-item nav-link white" href="https://www.linkedin.com/in/jacv" target="_blank">
+    <a class="nav-item nav-link white p-1 m-0" href="https://www.linkedin.com/in/jacv" target="_blank">
       <i class="fa fa-linkedin"></i>
     </a>
   </div>
 </nav>
-<div id="main-container" class="container text-center mt-8">
-  <img class=""  id="avatar" src="../assets/octocat.png" alt="avatar">
-  <h1 class="text-white m-2">FullStack Engineer</h1>
+<div id="main-container" class="container text-center mt-4">
+  <img  id="avatar" src="../assets/octocat.png" alt="avatar">
+  <h2 class="text-white m-2">FullStack Engineer</h2>
   <button id="time-line-button" mat-raised-button class="mb-2 shadow"(click)="_dialog.openTimeLine()">
     My timeline
   </button>
   <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
+    <mat-expansion-panel style="border-radius: 25px;">
+      <mat-expansion-panel-header class="shadow-sm" style="height: 40px; border-radius: 25px;">
         <mat-panel-title>My Overview</mat-panel-title>
       </mat-expansion-panel-header>
-      <h6>
+      <h6 class="mt-2">
         Visionary - I always say that the future is on the Web & cloud. GraphQL enthusiast and Web Assembly explorer.
       </h6>
       <hr>
@@ -33,7 +33,7 @@
     </mat-expansion-panel>
   </mat-accordion>
 </div>
-<mat-tab-group class="shadow-lg p-0 pt-0 mb-5 rounded card mt-4">
+<mat-tab-group [dynamicHeight]="true" class="shadow-lg p-0 pt-0 rounded card mt-3">
   <mat-tab style="color: black">
     <ng-template mat-tab-label>
       <span class="m-0 header-tab">About</span>
@@ -42,7 +42,7 @@
     <p>
       I'm a student at Instituto Tecnológico de Costa Rica and actually I'm also
       a Freelancer in my free time. Currently I live in Aguas Zarcas, San Carlos. I really love Web Development and my favorite Framework is Angular.
-      One of my favorites hobbies is exercising and watching some series on Netflix.
+      One of my favorites hobbies is exercising and watching Tv Shows on Netflix.
     </p>
   </mat-tab>
   <mat-tab>
@@ -59,9 +59,9 @@
     </p>
     <p>
       I've taught <strong>Web Development Courses</strong> in Angular and HTML5 to Instituto Tecnológico de Costa Rica 
-      students. In addition I've make serveral
+      students. In addition I've made serveral
       conferences to students and people in San Carlos.
-      If you want to know more about me,  you can check out my <strong>TimeLine.</strong>
+      If you want to know more about me, <strong> <span style="color:#c90e0c"> please checkout out my TimeLine. </span></strong>
     </p>
   </mat-tab>
   <mat-tab>
@@ -79,13 +79,15 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <span class="m-0 header-tab">Extra Courses & Complementary</span>
+      <span class="m-0 header-tab">Extra Courses</span>
       <i class="material-icons ml-1 align">assignment</i>
     </ng-template>
     <ul id="complementary-ul">
       <li class="comp-li">Diploma in Banking and Finance</li>
       <li class="comp-li">Angular Teaching Certificate</li>
       <li class="comp-li">TypeScript Teaching Certificate</li>
+      <li class="comp-li">Intro to SQL for Data Science</li>
+      <li class="comp-li">Git</li>
     </ul>
   </mat-tab>
   <mat-tab>
