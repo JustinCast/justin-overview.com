@@ -12,9 +12,12 @@
 <div id="main-container" class="container text-center mt-4">
   <img  id="avatar" src="../assets/octocat.png" alt="avatar">
   <h2 class="text-white m-2">FullStack Engineer</h2>
-  <button id="time-line-button" mat-raised-button class="mb-2 shadow"(click)="_dialog.openTimeLine()">
-    My timeline
-  </button>
+  <div class="container text-center mb-2">
+    <button mat-raised-button class="shadow-sm mr-2 center-btns"(click)="_dialog.openTimeLine()">
+      My timeline
+    </button>
+    <button mat-stroked-button class="shadow-sm ml-2" id="rates-btn">My Rates</button>
+  </div>
   <mat-accordion>
     <mat-expansion-panel style="border-radius: 25px;">
       <mat-expansion-panel-header class="shadow-sm" style="height: 40px; border-radius: 25px;">
@@ -33,7 +36,7 @@
     </mat-expansion-panel>
   </mat-accordion>
 </div>
-<mat-tab-group [dynamicHeight]="true" class="shadow-lg p-0 pt-0 rounded card mt-3">
+<mat-tab-group mat-align-tabs="center" [dynamicHeight]="true" class="shadow-lg p-0 pt-0 rounded card mt-3">
   <mat-tab style="color: black">
     <ng-template mat-tab-label>
       <span class="m-0 header-tab">About</span>
