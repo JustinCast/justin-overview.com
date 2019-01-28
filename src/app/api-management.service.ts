@@ -4,6 +4,7 @@ import { environment } from "src/environments/environment";
 import * as jsPDF from "jspdf";
 import { Review } from "./models/Review";
 import { MatSnackBar } from "@angular/material";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root"
@@ -22,13 +23,10 @@ export class ApiManagementService {
     );
   }
 
-  getReviews() {
-    this._http
-      .get<Array<Review>>(`${environment.SERVER_BASE_URL}getReviews`)
-      .subscribe(
-        reviews => this.reviews = reviews,
-        (err: HttpErrorResponse) => this.errorHandler(err)
-      );
+  getReviews(): Observable<Array<Review>> {
+    return this._http.get<Array<Review>>(
+      `${environment.SERVER_BASE_URL}getReviews`
+    );
   }
 
   saveReview(rate: Review) {
