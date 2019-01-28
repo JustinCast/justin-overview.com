@@ -1,16 +1,7 @@
-var express = require("express"),
-  fs = require("fs"),
+const express = require("express"),
   router = express.Router();
-router.get("/cv", function(req, res) {
-  var filePath = "/cv.pdf";
-
-  fs.readFile(__dirname + filePath, function(err, data) {
-    if(err) console.log(err);
-    res.contentType("application/pdf;base64,");
-    res.send(data);
-  });
-});
-
-
+const RateCTRL = require("./RouteControler");
+router.post("saveRate", RateCTRL.saveRate);
+router.post("sendApprovalEmail", RateCTRL.sendApprovalEmail);
 
 module.exports = router;
