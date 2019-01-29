@@ -1,3 +1,33 @@
-<p>
-  reviews works!
-</p>
+<div id="header" class="p-1">
+  <h2 class="text-center">Reviews</h2>
+</div>
+<ul *ngIf="reviews" class="mt-2 p-0 text-center" id="reviews">
+  <li *ngFor="let r of reviews" class="card review m-1 shadow-sm p-2">
+    <h4 class="text-center">{{r.fullName}}</h4>
+    <hr>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>comment</mat-icon> <span>Comment</span>
+          </mat-panel-title>
+          <mat-panel-description>
+            Click for details
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{r.comment}}</p>
+        <hr>
+        <ul class="container p-0 text-left" id="details">
+          <li><mat-icon class="align">people_outline</mat-icon> {{r.meetWay}}</li>
+          <li><mat-icon class="align">mail_outline</mat-icon> {{r.email}}</li>
+          <li><mat-icon class="align">map</mat-icon> {{r.country}}</li>
+        </ul>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </li>
+</ul>
+<footer class="footer shadow-lg pb-2">
+  <div class="container text-center">
+    <small>This information has been provided by <strong>Rate Me</strong> section</small>
+  </div>
+</footer>

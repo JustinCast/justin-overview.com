@@ -21,7 +21,7 @@ export class ReviewsComponent implements OnInit {
     this._api
       .getReviews()
       .subscribe(
-        reviews => (this.reviews = reviews),
+        reviews => {this.reviews = reviews; console.log(this.reviews);},
         (err: HttpErrorResponse) => this._api.errorHandler(err)
       );
   }

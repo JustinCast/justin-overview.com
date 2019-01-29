@@ -1,0 +1,42 @@
+#reviews {
+  list-style-type: none;
+}
+
+#details {
+  list-style-type: none;
+}
+
+.review {
+  width: 25%;
+  display: inline-block;
+}
+
+h4,
+h2 {
+  font-weight: lighter;
+}
+h4 {
+  color: #a0151e;
+}
+
+#header {
+  background-color: darkslategrey;
+  color: whitesmoke;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  background-color: darkslategray;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 0.5px dashed rgb(202, 201, 201);
+  margin: 1em 0;
+  padding: 0; 
+}
