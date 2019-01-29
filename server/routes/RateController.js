@@ -2,7 +2,7 @@
 var Rate = require("../models/RateSchema");
 
 function getReviews(req, res) {
-  Rate.find({})
+  Rate.find({accepted: true})
     .then(reviews => {
       res.status(200).send(reviews);
     })

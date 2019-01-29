@@ -1,3 +1,14 @@
+@media screen and (min-width: 601px) {
+  .review {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .review {
+    width: 97%;
+  }
+}
+
 #reviews {
   list-style-type: none;
 }
@@ -6,9 +17,13 @@
   list-style-type: none;
 }
 
+mat-expansion-panel {
+  background-color: rgba(206,37,35, 0.02);
+}
+
 .review {
-  width: 25%;
   display: inline-block;
+  background: rgba(229, 225, 232, 0.99)
 }
 
 h4,

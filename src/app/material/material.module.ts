@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { NgxSpinnerModule } from 'ngx-spinner';
 import {
   MatExpansionModule,
   MatButtonModule,
@@ -24,7 +25,8 @@ import {
     MatInputModule,
     MatSelectModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxSpinnerModule
   ],
   exports: [
     MatExpansionModule,
@@ -36,7 +38,8 @@ import {
     MatInputModule,
     MatSelectModule,
     MatProgressBarModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    NgxSpinnerModule
   ],
   declarations: []
 })

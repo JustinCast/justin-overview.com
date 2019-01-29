@@ -20,7 +20,7 @@ export class DialogManagerService {
 
   openReviews(): void {
     this.dialog.open(ReviewsComponent, {
-      width: '99%',
+      width: '99.99%',
       height: '85%',
       panelClass: 'dialog'
     });
