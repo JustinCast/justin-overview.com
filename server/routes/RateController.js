@@ -2,7 +2,7 @@
 var Rate = require("../models/RateSchema");
 
 function getReviews(req, res) {
-  Rate.find({accepted: true})
+  Rate.find({ accepted: true })
     .then(reviews => {
       res.status(200).send(reviews);
     })
@@ -40,10 +40,7 @@ function updateReview(req, res) {
 function sendApprovalEmail(data) {
   console.log(data);
   const sgMail = require("@sendgrid/mail");
-  sgMail.setApiKey(
-    process.env.SENDGRID_API_KEY ||
-      "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"
-  );
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: "justincastillovalladares@gmail.com",
     from: data.email,
