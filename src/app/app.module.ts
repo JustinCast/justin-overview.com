@@ -13,7 +13,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ReviewsComponent } from './dialogs/reviews/reviews.component';
 import { MyLoveComponent } from './my-love/my-love.component';
 import { MainComponent } from './main/main.component';
-import {CountDown} from "ng2-date-countdown";
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +21,7 @@ import {CountDown} from "ng2-date-countdown";
     RateMeComponent,
     ReviewsComponent,
     MyLoveComponent,
-    MainComponent,
-    CountDown
+    MainComponent
   ],
   imports: [
     BrowserModule,
