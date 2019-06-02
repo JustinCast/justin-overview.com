@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import {
   MatExpansionModule,
   MatButtonModule,
@@ -28,7 +29,8 @@ import {
     MatProgressBarModule,
     MatSnackBarModule,
     NgxSpinnerModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule
   ],
   exports: [
     MatExpansionModule,
@@ -42,7 +44,8 @@ import {
     MatProgressBarModule,
     MatSnackBarModule,
     NgxSpinnerModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule
   ],
   declarations: []
 })

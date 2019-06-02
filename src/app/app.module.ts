@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ReviewsComponent } from './dialogs/reviews/reviews.component';
 import { MyLoveComponent } from './my-love/my-love.component';
 import { MainComponent } from './main/main.component';
+import { LoveComponent } from './love/love.component';
+import { OurTimeLineComponent } from './dialogs/our-time-line/our-time-line.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { MainComponent } from './main/main.component';
     RateMeComponent,
     ReviewsComponent,
     MyLoveComponent,
-    MainComponent
+    MainComponent,
+    LoveComponent,
+    OurTimeLineComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { MainComponent } from './main/main.component';
   providers: [],
   entryComponents: [
     TimeLineComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OurTimeLineComponent
   ],
   bootstrap: [AppComponent]
 })
