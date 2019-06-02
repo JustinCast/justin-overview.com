@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-sm pt-0 pb-0 shadow pl-4 pr-4 mb-4">
+  <span class="navbar-brand text-white m-0 p-0">Justin A. Castillo V.</span>
+  <button mat-button [routerLink]="['/my-love']"><mat-icon class="text-white">favorite</mat-icon></button>
+  <div class="navbar-expand ml-auto navbar-nav social">
+    <a class="nav-item nav-link white p-1 m-0" href="https://github.com/JustinCast" target="_blank">
+      <i class="fa fa-github"></i>
+    </a>
+    <a class="nav-item nav-link white p-1 m-0" href="https://www.linkedin.com/in/jacv" target="_blank">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </div>
+</nav>
+<div id="main-container" class="container text-center mt-4">
+  <img  id="avatar" src="../assets/octocat.png" alt="avatar">
+  <h2 class="text-white m-2">FullStack Engineer</h2>
+  <div class="container text-center mb-2">
+    <button mat-raised-button class="shadow-sm mr-2 center-btns"(click)="_dialog.openTimeLine()">
+      My timeline
+    </button>
+    <button mat-stroked-button class="shadow-sm ml-2" id="rates-btn" (click)="openReviews();">My Reviews</button>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel style="border-radius: 25px;">
+      <mat-expansion-panel-header class="shadow-sm" style="height: 40px; border-radius: 25px;">
+        <mat-panel-title>My Overview</mat-panel-title>
+      </mat-expansion-panel-header>
+      <h6 class="mt-2">
+        Visionary - I always say that the future is on the Web & cloud. GraphQL enthusiast and Web Assembly explorer.
+      </h6>
+      <hr>
+      <div class="container">
+        <button onClick="window.location='https://drive.google.com/open?id=1O6_Xyq8D2s_QwMIi2KVv_KtxynV2WQ6y';" 
+        id="download-btn" mat-stroked-button>
+            <span class="download-txt">Download CV</span>
+        </button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<mat-tab-group mat-align-tabs="center" [dynamicHeight]="true" class="shadow-lg p-0 pt-0 rounded card mt-3">
+  <mat-tab style="color: black">
+    <ng-template mat-tab-label>
+      <span class="m-0 header-tab">About</span>
+      <i class="material-icons ml-1 align">account_circle</i>
+    </ng-template>
+    <p>
+      I'm a student at Instituto Tecnológico de Costa Rica and actually I'm also
+      a Freelancer in my free time. Currently I live in Aguas Zarcas, San Carlos. I really love Web Development and my favorite Framework is Angular.
+      One of my favorites hobbies is exercising and watching Tv Shows on Netflix.
+    </p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="m-0 header-tab">Projects</span>
+      <i class="material-icons ml-1 align">playlist_add_check</i>
+    </ng-template>
+    <p>
+      I've already worked in important projects like 
+      <i>
+        Sistema de Gestión de Averías del Acueducto de la Municipalidad de San Carlos
+      </i>
+      wich was developed in Android from June 2017 to June 2018. <br>
+    </p>
+    <p>
+      I've taught <strong>Web Development Courses</strong> in Angular and HTML5 to Instituto Tecnológico de Costa Rica 
+      students. In addition I've made serveral
+      conferences to students and people in San Carlos.
+      If you want to know more about me, <strong> <span style="color:#c90e0c"> please checkout out my TimeLine. </span></strong>
+    </p>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="m-0 header-tab">Tech Skills</span>
+      <i class="material-icons ml-1 align">code</i>
+    </ng-template>  
+    <ul id="tech-ul" class="text-center">
+      <li class="tech-li card shadow p-2 text-center" *ngFor="let t of technologies">
+        <img src="{{t.img}}" alt="{{t.name}}" class="tech-img">
+        <hr class="h-line">
+        <p class="text-center text-danger tech-name">{{t.name}}</p>
+      </li>
+    </ul>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="m-0 header-tab">Extra Courses</span>
+      <i class="material-icons ml-1 align">assignment</i>
+    </ng-template>
+    <ul id="complementary-ul">
+      <li class="comp-li">Diploma in Banking and Finance</li>
+      <li class="comp-li">Angular Teaching Certificate</li>
+      <li class="comp-li">TypeScript Teaching Certificate</li>
+      <li class="comp-li">Intro to SQL for Data Science</li>
+      <li class="comp-li">Git</li>
+    </ul>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="m-0 header-tab">Rate me</span>
+      <i class="material-icons ml-1 align">star</i>
+    </ng-template>
+    <app-rate-me></app-rate-me>
+  </mat-tab>
+</mat-tab-group>
+
+<footer class="footer shadow-lg p-1">
+  <div class="container">
+    <span>&copy; {{year}}</span>
+    | <small>v36</small>
+  </div>
+</footer>

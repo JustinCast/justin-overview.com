@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+#main-container {
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto
+}
+mat-icon{
+  color: red
+}
+countdown{
+  width: 100%
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/angie1.jpg');
+  background-size: cover;
+}
+
+/deep/ .countdown {
+  width: 100%;
+  height: 100px;
+  border: 1px dashed lightgray;
+  margin-bottom: 1%;
+  border-radius: 10px;
+
+  .measurements {
+    color: black;
+    margin-right: 5px;
+    padding: 10px;
+ }
+
+ .divider {
+  font-size: 30px;
+ }
+}

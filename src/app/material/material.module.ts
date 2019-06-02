@@ -11,7 +11,8 @@ import {
   MatInputModule,
   MatSelectModule,
   MatProgressBarModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatCardModule
 } from "@angular/material";
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import {
     MatSelectModule,
     MatProgressBarModule,
     MatSnackBarModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatCardModule
   ],
   exports: [
     MatExpansionModule,
@@ -39,7 +41,8 @@ import {
     MatSelectModule,
     MatProgressBarModule,
     MatSnackBarModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatCardModule
   ],
   declarations: []
 })
