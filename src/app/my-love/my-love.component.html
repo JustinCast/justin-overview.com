@@ -21,6 +21,19 @@
     <h6 id="demo">
     </h6>
     <hr>
-    <button disabled mat-stroked-button>Ver sorpresa<mat-icon>lock</mat-icon></button>
+    <mat-accordion id="acc" [hidden]="true">
+      <mat-expansion-panel class="m-2">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Ingresa la fecha en que nos mandamos el primer mensaje
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field>
+          <input type="date" matInput placeholder="Fecha" #date>
+        </mat-form-field>
+        <button mat-stroked-button (click)="checkDate(date.value)">Verificar<mat-icon>search</mat-icon></button>
+      </mat-expansion-panel>
+    </mat-accordion>
   </div>
 </div>

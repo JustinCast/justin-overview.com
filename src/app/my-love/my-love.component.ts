@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { MatSnackBar } from "@angular/material";
 
 @Component({
   selector: "app-my-love",
@@ -6,10 +8,10 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./my-love.component.scss"]
 })
 export class MyLoveComponent implements OnInit {
-  constructor() {}
+  constructor(private _router: Router, private _snackbar: MatSnackBar) {}
 
   ngOnInit() {
-    var countDownDate = new Date("June 06, 2019").getTime();
+    var countDownDate = new Date("June 05, 2019").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -18,6 +20,7 @@ export class MyLoveComponent implements OnInit {
 
       // Find the distance between now and the count down date
       var distance = countDownDate - now;
+      
 
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -34,8 +37,17 @@ export class MyLoveComponent implements OnInit {
       // If the count down is finished, write some text
       if (distance < 0) {
         clearInterval(x);
+        document.getElementById("acc").hidden = false;
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
+    
+  }
+
+  checkDate(date: any) {
+    if(date === '2019-02-15')
+      this._router.navigate(['/love'])
+    else
+      this._snackbar.open('Fecha incorrecta mi amor', "Ay :'(", {duration: 2000});
   }
 }
