@@ -8,7 +8,7 @@ import { DialogManagerService } from '../dialogs/dialog-manager.service';
 })
 export class LoveComponent implements OnInit {
   written_date: Date = new Date('2019-05-18')
-  constructor(private _dialog: DialogManagerService) { }
+  constructor(public _dialog: DialogManagerService) { }
 
   ngOnInit() {
   }
