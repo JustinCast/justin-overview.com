@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { TimeLineComponent } from './time-line/time-line.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-import { OurTimeLineComponent } from './our-time-line/our-time-line.component';
 
 @Injectable({
   providedIn: 'root'
@@ -26,14 +25,5 @@ export class DialogManagerService {
       panelClass: 'dialog'
     });
   }
-
-  openOurTimeLine(): void {
-    this.dialog.open(OurTimeLineComponent, {
-      width: '99.99%',
-      height: '50%',
-      panelClass: 'dialog'
-    });
-  }
-
   
 }

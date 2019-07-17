@@ -6,14 +6,14 @@
 
 html {
   font-family: "Open Sans", sans-serif;
-  //background-image: linear-gradient(315deg, rgba(201,14,12, 0.9) 74%,rgba(92,44,43, 0.9) 40%);
   background-repeat: no-repeat ;
   background-position: center center fixed;
   background-size: cover;
-  height: 100%;;
+  height: 100%;
 }
 body{
-  background: transparent;
+  background-image: linear-gradient(315deg, rgba(201,14,12, 0.9) 74%,rgba(92,44,43, 0.9) 40%);
+  //background: transparent;
   height: 100%;
 }
 
