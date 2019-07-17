@@ -40,13 +40,11 @@
 @media screen and (min-width: 601px) {
   .footer {
     font-size: 25px;
-    position: fixed;
   }
 }
 @media screen and (max-width: 700px) {
   .footer {
     font-size: 20px;
-    position: relative;
   }
 }
 @media screen and (min-width: 601px) {
@@ -266,13 +264,12 @@ p {
   padding: 0; 
 }
 .footer {
-  // background: rgba(30, 29, 30, 0.1);
-  background-image: radial-gradient( circle farthest-corner at 81.9% 53.5%,  rgba(173,53,53,1) 16.3%, rgba(240,60,60,1) 100.2% );
-  left: 0;
+  position: fixed;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  padding: 1rem;
   color: white;
-  height: 5%;
   text-align: center;
 }
 #complementary-ul {
